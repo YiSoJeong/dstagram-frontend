@@ -23,7 +23,7 @@ export default function Login() {
         <TextField
           className={classes.rowfield}
           color="secondary"
-          label="email"
+          label="이메일"
           variant="outlined"
         />
       </Grid>
@@ -31,7 +31,7 @@ export default function Login() {
         <TextField
           className={classes.rowfield}
           color="secondary"
-          label="password"
+          label="비밀번호"
           variant="outlined"
         />
       </Grid>
