@@ -7,7 +7,8 @@ export default function AlertDialog(props) {
   const { open, handleClose } = props;
 
   const message = {
-    loginError: "사용자를 찾을 수 없습니다."
+    loginError: "사용자를 찾을 수 없습니다.",
+    existUser: "기존에 있는 사용자 입니다."
   };
 
   return (
