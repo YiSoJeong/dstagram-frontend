@@ -5,6 +5,7 @@ import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 
 import Login from "./components/Login";
+import SignUp from "./components/SignUp";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -29,7 +30,7 @@ function App() {
     <Box className={classes.root} display="flex" justifyContent="center">
       <Grid item xs={6} display="flex" justifyContent="center">
         <Paper className={classes.paper} elevation={3}>
-          <Login />
+          <SignUp />
         </Paper>
       </Grid>
     </Box>
