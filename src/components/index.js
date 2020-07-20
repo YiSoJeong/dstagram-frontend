@@ -5,3 +5,4 @@ export { default as SignUp } from "./SignUp";
 export { default as AlertDialog } from "./AlertDialog";
 export { default as DeleteDialog } from "./DeleteDialog";
 export { default as Footer } from "./Footer";
+export { default as Header } from "./Header";

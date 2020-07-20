@@ -20,9 +20,6 @@ export default function Login() {
 
   return (
     <Grid container direction="column" alignItems="center" spacing={2}>
-      <Typography variant="h6" gutterBottom>
-        dstagram
-      </Typography>
       <Grid item>
         <TextField
           className={classes.rowfield}
