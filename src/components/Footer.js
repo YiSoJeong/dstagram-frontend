@@ -20,15 +20,27 @@ const useStyles = makeStyles(theme => ({
 export default function Footer() {
   const classes = useStyles();
 
+  const onClickHome = () => {
+    window.location.href = "/home";
+  };
+
+  const onClickUpload = () => {
+    window.location.href = "/upload";
+  };
+
+  const onClickUser = () => {
+    window.location.href = "/user";
+  };
+
   return (
     <Grid item className={classes.footer}>
-      <Fab color="secondary" className={classes.margin}>
+      <Fab color="secondary" className={classes.margin} onClick={onClickHome}>
         <HomeIcon />
       </Fab>
-      <Fab color="secondary" className={classes.margin}>
+      <Fab color="secondary" className={classes.margin} onClick={onClickUpload}>
         <AddIcon />
       </Fab>
-      <Fab color="secondary" className={classes.margin}>
+      <Fab color="secondary" className={classes.margin} onClick={onClickUser}>
         <PersonIcon />
       </Fab>
     </Grid>
