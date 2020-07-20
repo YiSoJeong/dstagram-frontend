@@ -4,8 +4,8 @@ import Box from "@material-ui/core/Box";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 
-import Login from "./components/Login";
-import SignUp from "./components/SignUp";
+import { Login, SignUp, AlertDialog, DeleteDialog, Home } from "./components";
+import { BrowserRouter, Route } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -27,13 +27,17 @@ function App() {
   const classes = useStyles();
 
   return (
-    <Box className={classes.root} display="flex" justifyContent="center">
-      <Grid item xs={6} display="flex" justifyContent="center">
-        <Paper className={classes.paper} elevation={3}>
-          <SignUp />
-        </Paper>
-      </Grid>
-    </Box>
+    <BrowserRouter>
+      <Box className={classes.root} display="flex" justifyContent="center">
+        <Grid item xs={6}>
+          <Paper className={classes.paper} elevation={3}>
+            <Route exact path="/" component={Login} />
+            <Route exact path="/home" component={Home} />
+            <Route exact path="/sign-up" component={SignUp} />
+          </Paper>
+        </Grid>
+      </Box>
+    </BrowserRouter>
   );
 }
 

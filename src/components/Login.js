@@ -14,6 +14,14 @@ const useStyles = makeStyles(theme => ({
 export default function Login() {
   const classes = useStyles();
 
+  const onClickLogin = () => {
+    window.location.href = "/home";
+  };
+
+  const onClickSignUp = () => {
+    window.location.href = "/sign-up";
+  };
+
   return (
     <Grid container direction="column" alignItems="center" spacing={2}>
       <Typography variant="h6" gutterBottom>
@@ -40,6 +48,7 @@ export default function Login() {
           className={classes.rowfield}
           variant="contained"
           color="secondary"
+          onClick={onClickLogin}
         >
           로그인
         </Button>
@@ -49,6 +58,7 @@ export default function Login() {
           className={classes.rowfield}
           variant="contained"
           color="secondary"
+          onClick={onClickSignUp}
         >
           회원가입
         </Button>
