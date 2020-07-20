@@ -6,3 +6,4 @@ export { default as AlertDialog } from "./AlertDialog";
 export { default as DeleteDialog } from "./DeleteDialog";
 export { default as Footer } from "./Footer";
 export { default as Header } from "./Header";
+export { default as Profile } from "./Profile";

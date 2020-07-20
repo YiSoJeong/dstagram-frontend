@@ -10,9 +10,16 @@ import {
   AlertDialog,
   DeleteDialog,
   Home,
-  Header
+  Header,
+  Profile
 } from "./components";
 import { BrowserRouter, Route } from "react-router-dom";
+
+/*
+TODO: profile component 만들기
+TODO: Upload component 만들기
+TODO: Detail component 만들기
+*/
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -42,6 +49,7 @@ function App() {
             <Route exact path="/" component={Login} />
             <Route exact path="/home" component={Home} />
             <Route exact path="/sign-up" component={SignUp} />
+            <Route exact path="/user" component={Profile} />
           </Paper>
         </Grid>
       </Box>
