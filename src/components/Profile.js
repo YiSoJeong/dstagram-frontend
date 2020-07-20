@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Footer from "./Footer";
+import DetailDialog from "./DetailDialog";
 import {
   Grid,
   Avatar,
@@ -107,8 +108,14 @@ const useStyles = makeStyles(theme => ({
 export default function Profile() {
   const classes = useStyles();
 
+  const [openDetail, setOpenDetail] = useState(false);
+
   const onClickLogout = () => {
     window.location.href = "/";
+  };
+
+  const onClickImg = () => {
+    setOpenDetail(true);
   };
 
   return (
@@ -133,9 +140,11 @@ export default function Profile() {
               <img
                 src={"https://material-ui.com/static/images/grid-list/star.jpg"}
                 alt={tile.title}
+                onClick={onClickImg}
               />
             </GridListTile>
           ))}
+          <DetailDialog openDetail={openDetail} setOpenDetail={setOpenDetail} />
         </GridList>
       </Grid>
       <Footer />
