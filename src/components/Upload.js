@@ -3,16 +3,14 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Card, CardMedia, Button, TextField, Grid } from "@material-ui/core";
 
 const useStyles = makeStyles({
-  card: {
-    maxWidth: 345
-  },
   media: {
-    height: 140
+    height: 550,
+    width: 550
   }
 });
 
 export default function Upload() {
-  const classes = makeStyles();
+  const classes = useStyles();
 
   const onClickCancle = () => {
     window.location.href = "/home";
@@ -28,7 +26,7 @@ export default function Upload() {
       direction="column"
       justify="center"
       alignItems="stretch"
-      spacing={3}
+      spacing={2}
     >
       <Grid item>
         <img
