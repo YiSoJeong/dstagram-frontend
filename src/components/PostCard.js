@@ -11,7 +11,8 @@ import { red } from "@material-ui/core/colors";
 
 const useStyles = makeStyles(theme => ({
   card: {
-    maxWidth: 600
+    maxWidth: 550,
+    maxHeight: 550
   },
   media: {
     height: 0,
@@ -27,7 +28,7 @@ export default function PostCard() {
 
   return (
     <Grid item>
-      <Card className={classes.card}>
+      <Card className={classes.card} elevation={3}>
         <CardHeader
           avatar={<Avatar className={classes.avatar}>R</Avatar>}
           title="nickname"

@@ -8,12 +8,11 @@ import PersonIcon from "@material-ui/icons/Person";
 
 const useStyles = makeStyles(theme => ({
   footer: {
-    position: "absolute",
-    top: 850
+    marginTop: 20
   },
   margin: {
-    marginLeft: 100,
-    marginRight: 100
+    marginLeft: 90,
+    marginRight: 90
   }
 }));
 

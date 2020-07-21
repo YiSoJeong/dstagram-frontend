@@ -6,24 +6,32 @@ import PostCard from "./PostCard";
 import Footer from "./Footer";
 
 const useStyles = makeStyles(theme => ({
-  home: {}
+  home: {
+    overflow: "scroll",
+    height: 700,
+    padding: 4
+  }
 }));
 
 export default function Login() {
   const classes = useStyles();
 
   return (
-    <Grid
-      className={classes.home}
-      container
-      direction="column"
-      alignItems="center"
-      spacing={5}
-    >
-      <Grid>
-        <PostCard />
+    <>
+      <Grid
+        className={classes.home}
+        container
+        direction="column"
+        alignItems="center"
+        spacing={1}
+      >
+        <Grid container direction="column" alignItems="center" spacing={1}>
+          <PostCard />
+          <PostCard />
+          <PostCard />
+        </Grid>
       </Grid>
       <Footer />
-    </Grid>
+    </>
   );
 }

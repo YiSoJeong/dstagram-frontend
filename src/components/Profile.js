@@ -101,7 +101,7 @@ const useStyles = makeStyles(theme => ({
   },
   gridList: {
     width: 500,
-    height: 490
+    height: 600
   }
 }));
 
@@ -122,13 +122,18 @@ export default function Profile() {
     <Grid container direction="column" alignItems="center" spacing={2}>
       <Grid container className={classes.userInfo}>
         <Grid item xs={2}>
-          <Avatar>W</Avatar>
+          <Avatar style={{ marginLeft: 64 }}>W</Avatar>
         </Grid>
         <Grid item xs={6}>
           nickname
         </Grid>
         <Grid item xs={4}>
-          <Button variant="contained" color="secondary" onClick={onClickLogout}>
+          <Button
+            style={{ marginLeft: 64 }}
+            variant="contained"
+            color="secondary"
+            onClick={onClickLogout}
+          >
             Logout
           </Button>
         </Grid>
