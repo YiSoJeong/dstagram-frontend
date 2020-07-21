@@ -1,21 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Grid,
-  Avatar,
+  Box,
   Button,
   Dialog,
   DialogContent,
-  DialogContentText,
-  Card,
-  CardMedia,
   TextField
 } from "@material-ui/core";
+import DeleteDialog from "./DeleteDialog";
 
 const useStyles = makeStyles({
-  card: {
-    maxWidth: 250
-  },
   media: {
     width: 550,
     height: 550
@@ -26,21 +21,22 @@ export default function DetailDialog(props) {
   const classes = useStyles();
   const { openDetail, setOpenDetail } = props;
 
+  const [isUpdate, setIsUpdate] = useState(false);
+  const [isDelete, setIsDelete] = useState(false);
+
   const onClickUpdate = () => {
-    window.location.href = "/user";
+    setIsUpdate(true);
   };
 
   const onClickDelete = () => {
-    window.location.href = "/user";
+    setIsDelete(true);
   };
 
   const onClickCancle = () => {
-    window.location.href = "/user";
+    setIsUpdate(false);
   };
 
-  const onClickUpload = () => {
-    window.location.href = "/user";
-  };
+  const onClickUpload = () => {};
 
   return (
     <Dialog
@@ -72,22 +68,34 @@ export default function DetailDialog(props) {
               multiline
               rows={4}
               variant="outlined"
+              disabled={!isUpdate}
             />
           </Grid>
           <Grid item>
-            <Button color="secondary" onClick={onClickUpdate}>
-              수정
-            </Button>
-            <Button color="secondary" onClick={onClickDelete}>
-              삭제
-            </Button>
-            <Button color="secondary" onClick={onClickCancle}>
-              취소
-            </Button>
-            <Button color="secondary" onClick={onClickUpload}>
-              완료
-            </Button>
+            {isUpdate ? (
+              <Box>
+                <Button color="secondary" onClick={onClickCancle}>
+                  취소
+                </Button>
+                <Button color="secondary" onClick={onClickUpload}>
+                  완료
+                </Button>
+              </Box>
+            ) : (
+              <Box>
+                <Button color="secondary" onClick={onClickUpdate}>
+                  수정
+                </Button>
+                <Button color="secondary" onClick={onClickDelete}>
+                  삭제
+                </Button>
+              </Box>
+            )}
           </Grid>
+          <DeleteDialog
+            open={isDelete}
+            handleClose={() => setIsDelete(false)}
+          />
         </Grid>
       </DialogContent>
     </Dialog>
