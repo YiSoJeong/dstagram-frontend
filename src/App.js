@@ -2,21 +2,7 @@ import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import { Box, Paper, Grid } from "@material-ui/core";
-import {
-  Login,
-  SignUp,
-  AlertDialog,
-  DeleteDialog,
-  Home,
-  Header,
-  Profile,
-  Upload
-} from "./components";
-
-/*
-TODO: Create Detail component
-TODO: Create Upload component
-*/
+import { Login, SignUp, Home, Header, Profile, Upload } from "./components";
 
 const useStyles = makeStyles(theme => ({
   root: {
