@@ -1,9 +1,7 @@
 import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
-import Box from "@material-ui/core/Box";
-import Paper from "@material-ui/core/Paper";
-import Grid from "@material-ui/core/Grid";
-
+import { Box, Paper, Grid } from "@material-ui/core";
 import {
   Login,
   SignUp,
@@ -11,14 +9,13 @@ import {
   DeleteDialog,
   Home,
   Header,
-  Profile
+  Profile,
+  Upload
 } from "./components";
-import { BrowserRouter, Route } from "react-router-dom";
 
 /*
-TODO: profile component 만들기
-TODO: Upload component 만들기
-TODO: Detail component 만들기
+TODO: Create Detail component
+TODO: Create Upload component
 */
 
 const useStyles = makeStyles(theme => ({
@@ -50,6 +47,7 @@ function App() {
             <Route exact path="/home" component={Home} />
             <Route exact path="/sign-up" component={SignUp} />
             <Route exact path="/user" component={Profile} />
+            <Route exact path="/upload" component={Upload} />
           </Paper>
         </Grid>
       </Box>
