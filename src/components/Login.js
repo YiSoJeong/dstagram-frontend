@@ -30,7 +30,7 @@ export default function Login() {
     Api.post("/sign-in", loginInfo)
       .then(res => {
         console.log(res);
-        // TODO: accessToken, refreshToken 받아서 context에 등록? sessionStorage에 등록?
+        // TODO: accessToken, refreshToken 받아서 context에 등록? localStorage에 등록?
         window.location.href = "/home";
       })
       .catch(async err => {
