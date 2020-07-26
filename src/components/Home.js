@@ -48,7 +48,7 @@ export default function Login() {
       >
         <Grid container direction="column" alignItems="center" spacing={1}>
           {board.map(post => (
-            <PostCard />
+            <PostCard post={post} />
           ))}
         </Grid>
       </Grid>
