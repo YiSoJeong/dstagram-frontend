@@ -1,0 +1,22 @@
+{
+  "board": [
+    {
+      "nickname": "so",
+      "profileImage": "asdf asd",
+      "image_url": "qwef we",
+      "description": "stras fasdfing"
+    },
+    {
+      "nickname": "do",
+      "profileImage": "asdf s",
+      "image_url": "asdf ",
+      "description": "asdf a"
+    },
+    {
+      "nickname": "go",
+      "profileImage": "aasdf",
+      "image_url": "string",
+      "description": "string"
+    }
+  ]
+}
