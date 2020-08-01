@@ -1,3 +1,5 @@
+![React build](https://github.com/YiSoJeong/dstagram-frontend/workflows/React%20build/badge.svg?branch=master)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
