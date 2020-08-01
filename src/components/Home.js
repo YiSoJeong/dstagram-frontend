@@ -35,6 +35,14 @@ export default function Login() {
       .catch(err => {
         console.log("login err", err);
       });
+    Api.get(`/board`, { headers: { Authorization: AuthStr } })
+      .then(res => {
+        console.log(res.data);
+        setBoard(res.data);
+      })
+      .catch(err => {
+        console.log("login err", err);
+      });
   }, []);
 
   return (
@@ -47,8 +55,8 @@ export default function Login() {
         spacing={1}
       >
         <Grid container direction="column" alignItems="center" spacing={1}>
-          {board.map(post => (
-            <PostCard post={post} />
+          {board.map((post, idx) => (
+            <PostCard key={idx} post={post} />
           ))}
         </Grid>
       </Grid>
